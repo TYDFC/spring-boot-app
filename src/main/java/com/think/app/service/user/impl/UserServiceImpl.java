@@ -39,4 +39,10 @@ public class UserServiceImpl implements UserService {
         PageInfo result = new PageInfo(userDomains);
         return result;
     }
+
+    @Override
+    public User findUserById(int id) {
+        //将参数传给这个方法就可以实现物理分页了，非常简单。
+        return userDao.findUserById(id);
+    }
 }

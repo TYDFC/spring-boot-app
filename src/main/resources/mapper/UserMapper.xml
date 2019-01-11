@@ -33,5 +33,12 @@
         <include refid="BASE_TABLE"/>
   </select>
 
+  <select id="findUserById" resultType="com.think.app.model.User" parameterType="com.think.app.model.User">
+    SELECT
+    <include refid="BASE_COLUMN"/>
+    FROM
+    <include refid="BASE_TABLE"/>
+    where id=#{id, jdbcType=INTEGER}
+  </select>
 
 </mapper>

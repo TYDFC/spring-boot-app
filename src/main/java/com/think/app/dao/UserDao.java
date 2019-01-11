@@ -11,4 +11,6 @@ public interface UserDao {
     int insert(User record);
 
     List<User> selectUsers();
+
+    User findUserById(int id);
 }
