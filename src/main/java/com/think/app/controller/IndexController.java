@@ -16,10 +16,12 @@ public class IndexController {
     public UserService userService;
 
     @ApiOperation(value="Hello World",httpMethod = "POST",notes = "测试数据")
-    @RequestMapping("/")
+    @RequestMapping("users")
     public String index(){
         PageInfo<User> users= userService.findAllUser(1,10);
         return users.toString();
     }
+
+
 
 }
